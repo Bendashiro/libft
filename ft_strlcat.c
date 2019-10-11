@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:21:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 19:44:09 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/11 16:17:09 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 
 int		main(void)
 {
-	char dst[30] = "je su";
+	char dst[30] = "je suis";
 	char *src = "a manger";
 	char dst1[30] = "je suis";
 	char *src1 = "a manger";
