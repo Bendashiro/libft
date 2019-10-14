@@ -6,11 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:14:22 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 15:21:46 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:21:17 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void    ft_bzero(void *s, size_t n)
 {

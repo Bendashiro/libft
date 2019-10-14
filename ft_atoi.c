@@ -6,12 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:38:24 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 15:21:24 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:36:57 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_atoi(const char *str)
 {

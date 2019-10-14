@@ -6,12 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:59:22 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 17:23:22 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:24:35 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int		ft_isalpha(int c)
 {

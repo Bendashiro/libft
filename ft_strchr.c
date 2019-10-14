@@ -6,56 +6,42 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:32:05 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/11 18:41:35 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 20:27:00 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-/**
- * The strchr locates the first occurence of c
- * converted to char in the string pointed by
- * s and return s pointer to the located character
- * or NULL if not finded.
+/*
+** The strchr locates the first occurence of c
+** converted to char in the string pointed by
+** s and return s pointer to the located character
+** or NULL if not finded.
 */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	char *rep;
+	char *str;
 
-	rep = NULL;
-	i = 0;
-	printf("est ce que mon programme fait quelque chose\n");
-	while (s[i] != '\0')
+	str = (char*)s;
+	while (*str++ != '\0')
 	{
-		printf("rentre dans la boucle principal\n");
-		if (s[i] == (char)c)
-		{
-			printf("Found\n");
-			*rep++ = *s++;
-			return (rep);
-		}
-		else
-		{
-			i++;
-			printf("incrementation de i: %d\n", i);
-		}
+		if (*str == (unsigned char)c)
+			return (str);
 	}
 	return (NULL);
 }
-
-int		main(void)
+/*
+int     main(void)
 {
-	int c;
-	char *str = "je m'appel Hicham";
+	char str[16] = "je code beaucoup";
+	int c = 111;
 	char *rep;
 	char *rep2;
-	
-	c = 72;
+
 	rep = ft_strchr(str, c);
-	printf("ft_strchr: %s\n", rep);
 	rep2 = strchr(str, c);
-	printf("strchr: %s\n", rep2);
+	printf("ft_strrchr : %s\n", rep);
+	printf("strrchr : %s\n", rep2);
 }
+*/

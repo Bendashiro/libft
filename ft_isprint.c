@@ -6,9 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:15:54 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 16:37:00 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:24:57 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isprint(int c)
 {

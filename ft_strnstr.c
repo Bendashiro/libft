@@ -6,23 +6,31 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 19:37:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/11 21:08:48 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 18:36:43 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-/**
- * Locate the first occurence of the null-terminated string needle
- * in the string haystack.
-*/
-
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (needle == '\0')
-		return (haystack);
-	while (haystack != '\0' && len-- > 0)
+	char	*meule;
+	char	*aiguille;
+	int		i;
+	int		j;
+
+	meule = (char*)haystack;
+	aiguille = (char*)needle;
+	if (aiguille == '\0')
+		return (meule);
+	while (meule++ != '\0' && len-- > 0)
 	{
+		i = 0;
+		j = 0;
+		if (meule[i++] == aiguille[j++])
+		{
+			return (meule);
+		}
 	}
+	return (NULL);
 }
-	

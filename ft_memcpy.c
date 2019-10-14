@@ -6,20 +6,19 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:48:51 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/11 18:55:00 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:27:58 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char *d;
 	const char *s;
 
-	d = dst;
-	s = src;
+	d = (char)dst;
+	s = (const char)src;
 	while (n--)
 		*d++ = *s++;
 	return (dst);

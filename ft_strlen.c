@@ -6,12 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:08:58 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/08 22:22:12 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:25:41 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t		ft_strlen(const char *str)
 {

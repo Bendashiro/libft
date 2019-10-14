@@ -6,12 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:31:32 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/09 16:10:28 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 15:25:27 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int ft_strlcpy(char *dst, const char *src, size_t size)
 {
