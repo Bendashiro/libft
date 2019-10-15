@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:32:05 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 20:27:00 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/15 11:54:54 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ char	*ft_strchr(const char *s, int c)
 		if (*str == (unsigned char)c)
 			return (str);
 	}
+	/*if ((unsigned char)c == '\0')
+		return (str);*/
 	return (NULL);
 }
-/*
+
 int     main(void)
 {
 	char str[16] = "je code beaucoup";
-	int c = 111;
+	int c = 0;
 	char *rep;
 	char *rep2;
 
@@ -44,4 +46,3 @@ int     main(void)
 	printf("ft_strrchr : %s\n", rep);
 	printf("strrchr : %s\n", rep2);
 }
-*/

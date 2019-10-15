@@ -1,19 +1,19 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-EXEC = prog
-SRC = $(willcard *.c)
+NAME = libft.a
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
-all : $(EXEC)
-
+all : $(NAME)
+#Indexation de la librairie
+$(NAME) : $(OBJ) libft.h
+	ar rc $(NAME) $(OBJ)
+#Compilation des fichiers .c en .o
 %.o	: %.c
-	$(CC) $(CFLAGS) -o $(OBJ) -c $(SRC)
-
-$(EXEC) : $(OBJ)
-	$(CC) -o $(EXEC) $(OBJ)
+	$(CC) $(CFLAGS) -c $(SRC)
 
 clean :
 	rm -rf *.o
 
 fclean : clean
-	rm -rf $(EXEC)
+	rm -rf $(NAME)

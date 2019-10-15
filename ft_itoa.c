@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 13:34:42 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/15 13:51:42 by hibenfet         ###   ########.fr       */
+/*   Created: 2019/10/15 19:45:35 by hibenfet          #+#    #+#             */
+/*   Updated: 2019/10/15 19:49:44 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memchr(const void *s, int c, size_t n)
+char *ft_itoa(int n)
 {
-	const char *str;
-
-	str = s;
-	while (*str++ != '\0' && n--)
-	{
-		if (*str == (unsigned char)c)
-			return ((void *)str);
-	}
-	return (NULL);
+	
 }

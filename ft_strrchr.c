@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:09:54 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 20:26:07 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/14 23:19:46 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int     main(void)
 	char *rep2;
 
 	rep = ft_strrchr(str, c);
-	rep2 = strchr(str, c);
+	rep2 = strrchr(str, c);
 	printf("ft_strrchr : %s\n", rep);
 	printf("strrchr : %s\n", rep2);
 }
