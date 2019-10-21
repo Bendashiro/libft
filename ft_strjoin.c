@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:27:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/15 18:13:26 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/21 18:54:22 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[i++] = s2[j++];
 	str[i] = '\0';
 	return (str);
-}
-
-int		main(void)
-{
-	char *s1 = "je regarde";
-	char *s2 = "01234567891011121314";
-	char *rep;
-
-	rep = ft_strjoin(s1, s2);
-	printf("concat : %s", rep);
 }

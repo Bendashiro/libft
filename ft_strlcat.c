@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:21:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 15:29:09 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/21 18:54:05 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,4 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	dst[j] = '\0';
 	printf("concatenation: %s\n", dst);
 	return (j);
-}
-
-int		main(void)
-{
-	char dst[30] = "je suis";
-	char *src = "a manger";
-	char dst1[30] = "je suis";
-	char *src1 = "a manger";
-	int  s = 5;
-	int rep = ft_strlcat(dst, src, s);
-	int rep2 = strlcat(dst1, src1, s);
-	printf("ft_strlcat : %d\n", rep);
-	printf("strlcat : %d\n", rep2);
 }
