@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:21:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/21 18:54:05 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/21 21:53:47 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i;
 	size_t j;
+	int dstlen;
+	int srclen;
 
 	i = 0;
 	j = 0;
-	while (src[i] != '\0' && i <= (size - ft_strlen(dst) - 1))
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	while (src[i] != '\0' && i <= (size - dstlen - 1))
 	{
 		printf("avant j vaut %zu\n", j);
 		while (dst[j++] != '\0')
@@ -38,5 +42,5 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[j] = '\0';
 	printf("concatenation: %s\n", dst);
-	return (j);
+	return (dstlen + srclen);
 }
