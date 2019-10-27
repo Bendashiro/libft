@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:14:22 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 15:21:17 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 17:46:32 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void    ft_bzero(void *s, size_t n)
 {
 	while (n-- > 0)
-		*(unsigned char*)s = '0';
+		*(unsigned char*)s++ = '0';
 }

@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/26 21:57:28 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 16:55:56 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 	}*/
 	return (str);
 }
-
+/*
 int		main(void)
 {
 	char **tab;
@@ -103,3 +103,4 @@ int		main(void)
 	for (int i = 0; tab[i] != NULL; ++i)
 		printf("%s\n", tab[i]);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:45:35 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 12:55:37 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 17:04:18 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,8 @@ char		*ft_itoa(int n)
 	int		i;
 
 	len = ndigit(n);
-	if (!(str = malloc(sizeof(char) * len + (n >= 0 ? 1 : 2))))
+	if (!(str = malloc(sizeof(char) * len + (n < 0 ? 2 : 1))))
 		return (NULL);
-	str[len] = '\0';
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -50,5 +49,6 @@ char		*ft_itoa(int n)
 		n /= 10;
 		i--;
 	}
+	str[len] = '\0';
 	return (str);
 }

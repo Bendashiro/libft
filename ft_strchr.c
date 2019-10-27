@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:32:05 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/21 19:04:17 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 19:15:34 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,21 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char *str;
+	int i;
+	int len;
 
+	len = ft_strlen(s);
 	str = (char*)s;
-	while (*str++ != '\0')
+	i = 0;
+	if (c == '\0')
+		return (&str[len]);
+	while (str[i] != '\0')
 	{
-		if (*str == (unsigned char)c)
-			return (str);
+		if (str[i] == (unsigned char)c)
+		{
+			return (&str[i]);
+		}
+		i++;
 	}
 	return (NULL);
 }
