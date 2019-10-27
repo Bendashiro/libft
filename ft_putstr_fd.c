@@ -6,11 +6,20 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:15:23 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/15 12:16:44 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 15:37:52 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void    ft_putstr_fd(char *s, int fd)
 {
-    
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

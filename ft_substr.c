@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 15:09:15 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/26 21:58:33 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 15:30:25 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			str[j++] = s[i];
 	str[j] = '\0';
 	return (str);
-	
 }
 /*
 int     main(void)

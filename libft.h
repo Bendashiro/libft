@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:28:48 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/22 11:10:03 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 14:12:02 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
+void        ft_putchar_fd(char c, int fd);
+void        ft_putstr_fd(char *s, int fd);
+void        ft_putendl_fd(char *s, int fd);
+void        ft_putnbr_fd(int n, int fd);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);

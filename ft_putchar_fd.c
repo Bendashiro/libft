@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:06:39 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 12:52:23 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/27 15:34:36 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void    ft_putchar_fd(char c, int fd)
 {
-    write(fd, c, 1);
+    write(fd, &c, 1);
 }
