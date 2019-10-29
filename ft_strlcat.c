@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:21:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 22:45:13 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 07:11:44 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	int dstlen;
-	int srclen;
+	unsigned int	i;
+	unsigned int	j;
+	size_t			dstlen;
+	size_t			srclen;
 
 	i = 0;
 	j = 0;
-	
-	dstlen = ft_strlen(dst);
+	dstlen = ft_strnlen(dst, size);
 	srclen = ft_strlen(src);
-	while (src[i] != '\0' && i <= (size - dstlen - 1))
+	if (size <= dstlen)
+		return (srclen + size);
+	while (src[i] && (dstlen + i) < (size - 1))
 	{
-		while (dst[j++] != '\0')
-		;
-		j--;
-		while (src[i] != '\0')
-			dst[j++] = src[i++];
+		dst[dstlen + i] = src[i];
+		i++;
 	}
-	dst[j] = '\0';
+	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }

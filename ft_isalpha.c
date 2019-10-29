@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:59:22 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/21 18:55:24 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 00:38:45 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_isalpha(int c)
 {
-	if (((unsigned char)c >= 'a' && (unsigned char)c <= 'z') ||
-	((unsigned char)c >= 'A' && (unsigned char)c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') ||
+	(c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);

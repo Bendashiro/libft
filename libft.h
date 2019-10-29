@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:28:48 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 17:08:50 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/28 19:53:31 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 int			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t		ft_strnlen(const char *str, size_t n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strrev(char *str);

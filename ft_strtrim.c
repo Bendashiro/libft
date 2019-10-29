@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:32:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 15:36:45 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 07:12:17 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,16 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	str = ft_substr(s1, start, len);
 	return (str);
+}
+
+int		main(void)
+{
+	const char *s1;
+	const char *set;
+	char *rep;
+
+	s1 = "  \t \t \n   \n\n\n\t";
+	set = "";
+	rep = ft_strtrim(s1, set);
+	printf("%s", rep);
 }

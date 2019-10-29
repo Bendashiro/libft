@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 14:20:53 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 15:37:40 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 07:21:39 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ void ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		ft_putnbr_fd(n, fd);
 	}
-
+	/*if (n == 2147483647 || n == 2147483648)
+	{
+		ft_putchar_fd('2', fd);
+		n == 2147483647 ? ft_putnbr_fd(147483647, fd) : ft_putnbr_fd(147483648, fd);
+	}*/
 	if (n > 9)
 	{
 		mod = (n % 10) + '0';

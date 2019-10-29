@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:37:35 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 15:25:57 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 00:43:26 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	if ((unsigned char)c >= 'A' && (unsigned char)c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c += 32);
 	else
 		return (c);

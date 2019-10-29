@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 16:55:56 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 06:07:59 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,18 @@ int		ft_wordlen(const char *str, int i, char c)
 	}
 	return (len);
 }
+char	**ft_free(char **str)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while(str[i++])
+		free(str[i]);
+	free(str);
+	return (str);
+}
 char	**ft_split(char const *s, char c)
 {
 	char **str;
@@ -61,12 +73,19 @@ char	**ft_split(char const *s, char c)
 	x = 0;
 	nb_word = ft_word(s, c);
 	if (!(str = (char **)malloc(sizeof(char *) * (nb_word + 1))))
+	{
+		free(str);
 		return (NULL);
+	}	
 	str[nb_word] = NULL;
 	while (x < nb_word)
 	{
 		len = ft_wordlen(s, i, c);
-		str[x] = ft_substr(s, i, len);
+		if(!(str[x] = ft_substr(s, i, len)))
+		{
+			return (ft_free(str));
+		}
+
 		i = i + len + 1;
 		x++;
 	}

@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 12:02:36 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/28 22:35:39 by hibenfet         ###   ########.fr       */
+/*   Created: 2019/10/28 19:47:41 by hibenfet          #+#    #+#             */
+/*   Updated: 2019/10/28 20:42:46 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+size_t		ft_strnlen(const char *str, size_t n)
 {
-	size_t	len;
-	size_t	i;
-	char	*dup;
+	size_t i;
 
 	i = 0;
-	len = ft_strlen(s1);
-	if (!(dup = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (s1[i] != '\0')
+	while (str[i] && i < n)
 	{
-		dup[i] = s1[i];
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (i);
 }

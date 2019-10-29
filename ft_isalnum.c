@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 17:13:13 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 15:24:25 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/29 00:42:53 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_isalnum(int c)
 {
-	if (((unsigned char)c >= 'a' && (unsigned char)c <= 'z') ||
-	((unsigned char)c >= 'A' && (unsigned char)c <= 'Z') ||
-	((unsigned char)c >= '0' && (unsigned char)c <= '9'))
+	if ((c >= 'a' && c <= 'z') ||
+	(c >= 'A' && c <= 'Z') ||
+	(c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);	
