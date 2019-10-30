@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:38:24 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/29 00:52:05 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/10/30 05:59:04 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_atoi(const char *str)
 {
 	int i;
 	int minus;
-	int rep;
+	long long rep;
 
 	i = 0;
 	rep = 0;
@@ -32,7 +32,11 @@ int		ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		rep = rep * 10 + str[i++] - '0';
 	rep = rep * minus;
-	return (rep);
+	/*if (rep > 9223372036854775806)
+		return (0);
+	if (rep < -9223372036854775807)
+		return (-1);*/
+	return ((int)rep);
 }
 /*
 int		main(void)
@@ -41,7 +45,7 @@ int		main(void)
 	int		rep;
 	int		rep2;
 
-	str = "9223372036854775807";
+	str = "-922337203685477586545";
 	rep = ft_atoi(str);
 	rep2 = atoi(str);
 	printf("ft_atoi: %d\n", rep);
