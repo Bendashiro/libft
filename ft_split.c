@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/29 06:07:59 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/01 18:42:05 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,24 +89,6 @@ char	**ft_split(char const *s, char c)
 		i = i + len + 1;
 		x++;
 	}
-	/*
-	while (s[i] && c)
-	{
-		len = 0;
-		while (s[i + len] != c && s[i + len])
-		{
-			printf("s[i + len] = %c pour len = %d\n", s[i + len], len);
-			len++;
-		}
-		printf("Petite boucle fini : s[i + len] = %c pour len = %d\n", s[i + len], len);
-		if (!(str[x] = (char *)malloc(sizeof(char) * (len + 1))))
-			return (NULL);
-		printf("len = %d et i = %d\n", len, i);
-		str[x] = ft_substr(s, len, i);
-		//printf("AVstr: %s && char: %c pour i = %d\n",s, s[i], i); 
-		i += len  + 1;
-		x++;
-	}*/
 	return (str);
 }
 /*
@@ -116,8 +98,8 @@ int		main(void)
 	char *str;
 	char c;
 
-	str = "  mmanfer6boire6death666";
-	c = '6';
+	str = "split  ||this|for|me|||||!|";
+	c = '|';
 	tab = ft_split(str, c);
 	for (int i = 0; tab[i] != NULL; ++i)
 		printf("%s\n", tab[i]);
