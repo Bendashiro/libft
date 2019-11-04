@@ -6,19 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/01 18:42:05 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 14:08:08 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/**
- * Trouvez le premier char c;
- * Compter l'espacement jusqu'au prochain char c;
- * Renvoyer la len;
- * substring du start a la len;
- * 
- * 
-*/
 
 int		ft_word(const char *s, char c)
 {
@@ -27,28 +19,38 @@ int		ft_word(const char *s, char c)
 
 	i = 0;
 	count = 0;
+	if (s[i] != c)
+		count++;
+	while (s[i] == c)
+		i++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i - 1] != c)
+		if (s[i] != c && s[i - 1] == c)
+		{
 			count++;
+		}
 		i++;
 	}
-	printf("word: %d\n", count);
-	return (count);	
+	return (count);
+}
+
+int		ft_index(const char *str, char c)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && str[i] == c)
+		i++;
+	return (i);
 }
 
 int		ft_wordlen(const char *str, int i, char c)
 {
-	int len;
-
-	len = 0;
 	while (str[i] && str[i] != c)
-	{
-		len++;
 		i++;
-	}
-	return (len);
+	return (i - 1);
 }
+
 char	**ft_free(char **str)
 {
 	int i;
@@ -56,52 +58,37 @@ char	**ft_free(char **str)
 
 	i = 0;
 	j = 0;
-	while(str[i++])
+	while (str[i++])
 		free(str[i]);
 	free(str);
 	return (str);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	char **str;
-	int i;
-	int x;
-	int len;
-	int nb_word;
+	char	**str;
+	int		i[4];
 
-	i = 0;
-	x = 0;
-	nb_word = ft_word(s, c);
-	if (!(str = (char **)malloc(sizeof(char *) * (nb_word + 1))))
+	i[0] = ft_index(s, c);
+	i[1] = 0;
+	i[2] = ft_word(s, c);
+	if (!s || !c)
+		return (NULL);
+	if (!(str = (char **)malloc(sizeof(char *) * (i[2] + 1))))
 	{
 		free(str);
 		return (NULL);
-	}	
-	str[nb_word] = NULL;
-	while (x < nb_word)
+	}
+	str[i[2]] = NULL;
+	while (i[1] < i[2])
 	{
-		len = ft_wordlen(s, i, c);
-		if(!(str[x] = ft_substr(s, i, len)))
-		{
+		i[3] = ft_wordlen(s, i[0], c);
+		if (!(str[i[1]] = ft_substr(s, i[0], (i[3] - i[0] + 1))))
 			return (ft_free(str));
-		}
-
-		i = i + len + 1;
-		x++;
+		i[0] = i[3] + 1;
+		while (s[i[0]] == c)
+			i[0]++;
+		i[1]++;
 	}
 	return (str);
 }
-/*
-int		main(void)
-{
-	char **tab;
-	char *str;
-	char c;
-
-	str = "split  ||this|for|me|||||!|";
-	c = '|';
-	tab = ft_split(str, c);
-	for (int i = 0; tab[i] != NULL; ++i)
-		printf("%s\n", tab[i]);
-}
-*/
