@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:32:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/30 06:10:06 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:12:42 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,22 @@ static	int	checkc(char s1, char const *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	char	*start;
-	char	*end;
-	int		len;
-	unsigned int 	i;
+	char			*str;
+	char			*start;
+	char			*end;
+	int				len;
+	unsigned int	i;
 
 	i = 0;
 	if (!s1)
 		return (NULL);
-	start = (char*) s1;
-	end = (char*) s1 + ft_strlen(s1);
+	start = (char*)s1;
+	end = (char*)s1 + ft_strlen(s1);
 	while (checkc(*start, set))
 		start++;
 	if (start < end)
 		end--;
-	while(checkc(*end, set))
+	while (checkc(*end, set))
 		end--;
 	len = end - start + 1;
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
@@ -62,15 +62,3 @@ char		*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int		main(void)
-{
-	const char *s1;
-	const char *set;
-	char *rep;
-
-	s1 = "  \t \t \n   \n\n\n\t";
-	set = " \t\n";
-	rep = ft_strtrim(s1, set);
-	printf("rep == %s", rep);
-}*/

@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:15:54 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/29 00:36:23 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 16:43:12 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,4 @@ int		ft_isprint(int c)
 		return (1);
 	else
 		return (0);
-}	
+}

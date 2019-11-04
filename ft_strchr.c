@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:32:05 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/27 19:15:34 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:10:05 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
-	int i;
-	int len;
+	char	*str;
+	int		i;
+	int		len;
 
 	len = ft_strlen(s);
 	str = (char*)s;

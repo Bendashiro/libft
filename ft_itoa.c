@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:45:35 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/30 05:58:33 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 16:58:57 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ char			*ft_itoa_disgusting_hack(int nu, int len)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		len;
-	char 	*str;
-	
+	char	*str;
+
 	len = ndigit(n);
 	str = ft_itoa_disgusting_hack(n, len);
 	return (str);

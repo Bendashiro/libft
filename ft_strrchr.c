@@ -6,13 +6,13 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 18:09:54 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/28 23:38:22 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:07:32 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
 	int		len;
