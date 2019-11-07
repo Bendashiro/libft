@@ -6,13 +6,13 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 15:05:52 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/07 19:07:44 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_word(const char *s, char c)
+static	int		ft_word(const char *s, char c)
 {
 	int i;
 	int count;
@@ -34,7 +34,7 @@ int		ft_word(const char *s, char c)
 	return (count);
 }
 
-int		ft_index(const char *str, char c)
+static	int		ft_index(const char *str, char c)
 {
 	int i;
 
@@ -44,14 +44,14 @@ int		ft_index(const char *str, char c)
 	return (i);
 }
 
-int		ft_wordlen(const char *str, int i, char c)
+static	int		ft_wordlen(const char *str, int i, char c)
 {
 	while (str[i] && str[i] != c)
 		i++;
 	return (i - 1);
 }
 
-char	**ft_free(char **str)
+static	char	**ft_free(char **str)
 {
 	int i;
 	int j;
@@ -64,7 +64,7 @@ char	**ft_free(char **str)
 	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		i[4];

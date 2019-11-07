@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 14:20:53 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 17:19:48 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/07 21:55:12 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd((nb[0] / 10), fd);
 		ft_putchar_fd(nb[1], fd);
 	}
-	if (nb >= 0 && nb <= 9)
-	{
-		nb[0] += '0';
-		ft_putchar_fd(nb[0], fd);
-	}
+	if (nb[0] >= 0 && nb[0] <= 9)
+		ft_putchar_fd((nb[0] + '0'), fd);
 }

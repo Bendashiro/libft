@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:28:48 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 17:14:23 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/07 19:29:52 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);

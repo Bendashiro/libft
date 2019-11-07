@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:45:35 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 16:58:57 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/07 20:49:55 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int		ndigit(int n)
 	return (count);
 }
 
-char			*ft_itoa_disgusting_hack(int nu, int len)
+static	char	*ft_itoa_disgusting_hack(int nu, int len)
 {
 	char	*str;
 	int		i;
