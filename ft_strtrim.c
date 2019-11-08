@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:32:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 17:12:42 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/08 15:06:20 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	unsigned int	i;
 
 	i = 0;
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	start = (char*)s1;
 	end = (char*)s1 + ft_strlen(s1);

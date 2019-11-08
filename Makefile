@@ -14,6 +14,7 @@ all : $(NAME)
 #Indexation de la librairie
 $(NAME) : $(OBJ) libft.h
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 #Compilation des fichiers .c en .o
 %.o	: %.c
 	$(CC) $(CFLAGS) -c $(SRC)
