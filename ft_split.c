@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/08 13:34:11 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/08 19:15:59 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,8 @@ static	int		ft_wordlen(const char *str, int i, char c)
 static	char	**ft_free(char **str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
 	while (str[i++])
 		free(str[i]);
 	free(str);
