@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 15:09:15 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/13 14:43:48 by hibenfet         ###   ########.fr       */
+/*   Created: 2019/11/13 11:44:52 by hibenfet          #+#    #+#             */
+/*   Updated: 2019/11/13 17:48:40 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Create a substring from the "start" with
-** len lenght more than start
-*/
-
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	slen;
+	t_list *new;
+	t_list *temp;
 
-	if (!s)
+	if (!lst || !del || !f)
 		return (NULL);
-	slen = ft_strlen(s);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	if (!(new = ft_lstnew((f)(lst->content))))
 		return (NULL);
-	i = start;
-	j = 0;
-	if (start < slen)
+	lst = lst->next;
+	while (lst)
 	{
-		while (i < start + len && s[i] != '\0')
+		if (!(temp = ft_lstnew((*f)(lst->content))))
 		{
-			str[j] = s[i];
-			j++;
-			i++;
+			ft_lstclear(&new, del);
+			return (NULL);
 		}
+		ft_lstadd_back(&new, temp);
+		lst = lst->next;
 	}
-	str[j] = '\0';
-	return (str);
+	return (new);
 }

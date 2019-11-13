@@ -6,7 +6,7 @@
 #    By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/08 19:15:42 by hibenfet          #+#    #+#              #
-#    Updated: 2019/11/08 19:16:49 by hibenfet         ###   ########.fr        #
+#    Updated: 2019/11/13 17:41:17 by hibenfet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,21 +19,34 @@ ft_memcpy.c ft_memset.c ft_putchar_fd.c ft_strlcat.c ft_putnbr_fd.c ft_strchr.c 
 ft_putendl_fd.c ft_strdup.c ft_strjoin.c ft_putstr_fd.c ft_strlcpy.c ft_strlen.c \
 ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_substr.c ft_tolower.c ft_toupper.c \
 ft_strtrim.c ft_split.c ft_strrchr.c ft_strnlen.c ft_memccpy.c ft_memmove.c
+BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c ft_lstnew_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
+ft_lstmap_bonus.c ft_lstsize_bonus.c
 #SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
+
+OBJB = $(BONUS:.c=.o)
 
 all : $(NAME)
 #Indexation de la librairie
 $(NAME) : $(OBJ) libft.h
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
 #Compilation des fichiers .c en .o
+bonus : $(OBJB) libft.h
+		ar rc $(NAME) $(OBJB)
+		ranlib $(NAME)
+
 %.o	: %.c
-	$(CC) $(CFLAGS) -c $(SRC)
+		$(CC) $(CFLAGS) -c $(SRC) $(BONUS)
+
 
 clean :
-	rm -rf *.o
+		rm -rf *.o
 
 fclean : clean
-	rm -rf $(NAME)
+		rm -rf $(NAME)
+
 re : fclean all
+
+rebonus : fclean bonus
