@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 19:37:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/29 00:28:17 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/14 14:18:08 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (meule[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (meule[i++] == aiguille[j++])
+		while (meule[i++] == aiguille[j++] && i <= len)
 			if (aiguille[j] == '\0')
 				return (&meule[i - j]);
 	}

@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:52:41 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 17:05:16 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/14 17:54:40 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	ss1 = (unsigned char*)s1;
 	ss2 = (unsigned char*)s2;
 	while (((ss1[i] && !ss2[i]) ||
-	(ss2[i] && !ss1[i]) || (ss1[i] && ss2[i])) && i <= n)
+	(ss2[i] && !ss1[i]) || (ss1[i] && ss2[i])) && i < n)
 	{
 		if (ss1[i] != ss2[i])
 			return (ss1[i] - ss2[i]);
