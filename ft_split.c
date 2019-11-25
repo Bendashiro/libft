@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/10 19:48:30 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/17 19:03:13 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			**ft_split(char const *s, char c)
 	char	**str;
 	int		i[4];
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	i[0] = ft_index(s, c);
 	i[1] = 0;

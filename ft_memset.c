@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:55:13 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 16:50:20 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/25 12:49:12 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t			i;
 
 	i = 0;
-	ptr = (unsigned char *)b;
-	if (ptr == NULL)
+	if (b == NULL)
 		return (NULL);
+	ptr = (unsigned char *)b;
 	while (i < len)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return (ptr);
+	return (void*)(ptr);
 }

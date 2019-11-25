@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 11:44:52 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/13 17:48:40 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/25 13:59:47 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !del || !f)
 		return (NULL);
-	if (!(new = ft_lstnew((f)(lst->content))))
-		return (NULL);
-	lst = lst->next;
 	while (lst)
 	{
 		if (!(temp = ft_lstnew((*f)(lst->content))))

@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:08:58 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/10/14 15:25:41 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:34:06 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t		ft_strlen(const char *str)
 	size_t i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

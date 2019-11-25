@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:02:36 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/14 18:19:22 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/17 16:48:40 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 	char	*dup;
 
-	if( !s1)
+	if (!s1)
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s1);
