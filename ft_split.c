@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 12:59:41 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/26 20:31:04 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:49:54 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,31 +86,34 @@ char			**ft_split(char const *s, char c)
 		return (NULL);
 	//printf("miaou\n");
 	str = ft_spliter(str, copy, c, nword);
+	str[nword] = NULL;
 	//printf("ouaffff\n");
 	//printf("%s\n",str[0]);
-	i = -1;
-	//printf("chien\n");
-	while (str[i++] && word > 1)
+	i = 0;
+	printf("chien\n");
+	while (str[i] && word != 1)
 	{
 		//printf("minou\n");
 		str[i] = ft_strtrim(str[i], &c);
-		//printf("chat\n");
+		i++;
+		printf("strim : %s\n",str[i]);
+		printf("chat\n");
 	}
-	//printf("res presque final = %s\n", str[0]);
+	printf("res presque final = %s\n", str[0]);
 	return (str);
 }
 
 
 int main(void)
 {
-	char *str = "      split       this for   me  !      ";
+	char *str = "olol        ";
 	char set = ' ';
 	char **res = ft_split(str, set);
 	int i = 0;
 	printf("res final :\n");
 	printf("");
 	//system("leaks a.out\n");
-	printf("%s", res[0]);
+	//printf("%s", res[0]);
 	while (res[i])
 	{
 		printf("%s\n", res[i]);
