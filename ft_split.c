@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 12:59:41 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 12:50:09 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/27 14:56:55 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char			**ft_split(char const *s, char c)
 	if (!(str = (char **)malloc(sizeof(char *) * nword + 1)))
 		return (NULL);
 	str = ft_spliter(str, copy, c, nword);
-	str[nword] = NULL;
+	str[nword] = 0;
 	i = 0;
 	while (str[i] && word != 1)
 	{
@@ -91,12 +91,11 @@ char			**ft_split(char const *s, char c)
 	return (str);
 }
 
-/*
-int main(void)
+int main(int argc, char **argv)
 {
-	char *str = "         slpitt        dsfdfd         dfdfsf  ||       sdfd f   f";
+	char *str = "";
 	char set = ' ';
-	char **res = ft_split(str, set);
+	char **res = ft_split(argv[1], *argv[2]);
 	int i = 0;
 	printf("res final :\n");
 	printf("");
@@ -109,5 +108,3 @@ int main(void)
 	}
 	return (0);
 }
-
-*/

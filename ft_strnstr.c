@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 19:37:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 14:27:35 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/27 16:24:58 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,43 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!needle || !haystack)
+		return (NULL);
 	meule = (char*)haystack;
 	aiguille = (char*)needle;
-	if (!aiguille || ft_strncmp(meule, "", ft_strlen(meule)) == 0)
-		return (NULL);
 	if (ft_strncmp(aiguille, "", ft_strlen(aiguille)) == 0)
 		return (meule);
-	i = 0;
-	while (meule[i] != '\0' && i < len)
+	i = -1;
+	while (meule[++i] != '\0' && i < len)
 	{
 		j = 0;
-		while (meule[i++] == aiguille[j++] && i <= len)
+		printf("boucle");
+		while (meule[i] == aiguille[j] && i <= len)
+		{
+			printf("meule[%zu] == %c est = a aiguille[%zu] == %c\n", i, meule[i], j, aiguille[j]);
+			j++;
 			if (aiguille[j] == '\0')
-				return (&meule[i - j]);
+			{
+				//printf("meule[%zu] == %c est = a aiguille[%zu] == %c\n", i, meule[i], i, aiguille[i]);
+				printf("fin\n");
+				printf("result == %s pour i = %zu  j == %zu et minus == %zu\n", &meule[i - j], i, j, (i - j + 1));
+				return (&meule[i - j + 1]);
+			}
+			i++;
+		}
 	}
 	return (NULL);
 }
-/*
-int		main(void)
+
+int		main(int argc, char **argv)
 {
-	char *hay = "NULL";
-	char *nee = "";
-	int len = ft_strlen(hay);
-	char *hey = hay;
-	char *neee = nee;
-	printf("ft_strnstr == %s\n", ft_strnstr(hay, nee ,len));
-	printf("strnstr == %s\n", strnstr(hey, neee ,len));
-}*/
+	char *hay1 = NULL;
+	char *nee1 = "fdfdfad";
+	int len = ft_strlen(hay1);
+	char *hay2 = hay1;
+	char *nee2 = nee1;
+	// printf("ft_strnstr == %s\n", ft_strnstr(argv[1], argv[2] , 65));
+	// printf("strnstr == %s\n", strnstr(argv[1], argv[2] , 65));
+	printf("ft_strnstr == %s\n", ft_strnstr(hay1, nee1 , 65));
+	printf("strnstr == %s\n", strnstr(hay2, nee2 , 65));
+}
