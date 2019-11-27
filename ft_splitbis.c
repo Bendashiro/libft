@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_splitbis.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:43:40 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/26 18:56:43 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/27 19:55:03 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,22 +86,4 @@ char			**ft_split(char const *s, char c)
 		i[1]++;
 	}
 	return (str);
-}
-
-int main(void)
-{
-	char *str = "            split         moi ca entre les      espaces         ";
-	char set = ' ';
-	char **res = ft_split(str, set);
-	int i = 0;
-	printf("res final :\n");
-	printf("");
-	system("leaks a.out\n");
-
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	return (0);
 }

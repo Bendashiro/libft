@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:21:02 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 13:20:21 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/27 21:46:30 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[j] = '\0';
-	printf("concat impli == %s\n", dst);
-	printf("result ft_strlcat == %u\n", tot);
+	// printf("concat impli == %s\n", dst);
+	// printf("result ft_strlcat == %u\n", tot);
 	return (tot);
 }
 
 int		main(void)
 {
-	/*char dst[40] = "thx";
-	char *src = "thx to ntoniolo for this test !";
-	int size = 4;*/
-	/*char dst[50] = "there is no stars in the skythe cake is a lie ";
+	// char dst[40] = "thx";
+	// char *src = "thx to ntoniolo for this test !";
+	// int size = 0;
+	char dst[50] = "here is no stars in the skythe cake is a lie ";
 	char *src = "the cake is a lie !";
-	int size = 47;*/
-	char dst[40] = "there is no stars in the sky";
-	char *src = "";
-	int size = 29;
+	int size = 47;
+	// char dst[40] = "there is no stars in the sky";
+	// char *src = "sdfgsdg";
+	// int size = 0;
 	char *dst1 = dst;
 	char *src1 = src;
 	printf("%zu\n", ft_strlcat(dst, src, size));

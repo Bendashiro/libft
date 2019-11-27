@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 12:59:41 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 14:56:55 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/27 21:36:49 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,22 +89,4 @@ char			**ft_split(char const *s, char c)
 		i++;
 	}
 	return (str);
-}
-
-int main(int argc, char **argv)
-{
-	char *str = "";
-	char set = ' ';
-	char **res = ft_split(argv[1], *argv[2]);
-	int i = 0;
-	printf("res final :\n");
-	printf("");
-	//system("leaks a.out\n");
-	//printf("%s", res[0]);
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	return (0);
 }
