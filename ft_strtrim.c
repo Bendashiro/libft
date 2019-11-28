@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:32:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 14:37:59 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/28 13:05:19 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,15 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = (char*)s1;
-	end = (char*)s1 + ft_strlen(s1);
+	len = ft_strlen(s1);
+	end = (char*)s1 + len;
 	while (checkc(*start, set))
+	{
 		start++;
-	if (start < end)
-		end--;
-	while (checkc(*end, set))
-		end--;
-	len = end - start + 1;
+		len--;
+	}
+	while (*start && checkc(*--end, set))
+		len--;
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	while (len-- > 0)
