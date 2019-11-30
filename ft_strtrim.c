@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:32:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/28 13:05:19 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/11/30 22:09:31 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 #include "libft.h"
 
-static	int	checkc(char s1, char const *set)
+static	int	checkc(char s1, const char *set)
 {
 	unsigned int i;
 
@@ -35,7 +35,7 @@ static	int	checkc(char s1, char const *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(const char *s1, const char *set)
 {
 	char			*str;
 	char			*start;
