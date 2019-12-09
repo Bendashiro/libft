@@ -6,7 +6,7 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 19:57:04 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/27 19:56:40 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/12/09 17:06:02 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *temp;
-	t_list *temp1;
 
 	if (!lst || !del)
 		return ;
-	temp1 = *lst;
+	temp = *lst;
 	while (*lst)
 	{
-		temp = temp1->next;
-		ft_lstdelone(temp1, (del));
-		temp1 = temp;
+		*lst = temp->next;
+		ft_lstdelone(temp, (del));
+		temp = *lst;
 	}
 	*lst = NULL;
 	return ;

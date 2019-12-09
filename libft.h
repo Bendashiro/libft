@@ -6,14 +6,13 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:28:48 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/30 20:30:33 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/12/09 17:58:05 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -42,7 +41,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-char			**ft_strsplit(char const *s, char c);
+char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s1);
 char			*ft_strjoin(char const *s1, char const *s2);

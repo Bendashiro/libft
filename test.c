@@ -3,8 +3,11 @@
 int main()
 {
 	char **ret;
-	char string[50] = "";
+	char *string;
 
-	ret = ft_strsplit(string, 'c');
+	string = malloc(sizeof(char) * 1);
+	*string = '\0';
+
+	ret = ft_split(string, 'c');
 	printf("%s\n", *ret);
 }

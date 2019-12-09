@@ -6,12 +6,11 @@
 /*   By: hibenfet <hibenfet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:47:35 by hibenfet          #+#    #+#             */
-/*   Updated: 2019/11/04 16:42:57 by hibenfet         ###   ########.fr       */
+/*   Updated: 2019/12/09 17:58:49 by hibenfet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 int		ft_isdigit(int c)
 {
